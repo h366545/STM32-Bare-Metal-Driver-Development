@@ -355,52 +355,52 @@ typedef struct
  * Clock Disable Macros for GPIOx peripherals
  */
 
-#define GPIOA_PCLK_DI()		(RCC->AHB1RSTR |= (1 << 0))
-#define GPIOB_PCLK_DI()		(RCC->AHB1RSTR |= (1 << 1))
-#define GPIOC_PCLK_DI()		(RCC->AHB1RSTR |= (1 << 2))
-#define GPIOD_PCLK_DI()		(RCC->AHB1RSTR |= (1 << 3))
-#define GPIOE_PCLK_DI()		(RCC->AHB1RSTR |= (1 << 4))
-#define GPIOF_PCLK_DI()		(RCC->AHB1RSTR |= (1 << 5))
-#define GPIOG_PCLK_DI()		(RCC->AHB1RSTR |= (1 << 6))
-#define GPIOH_PCLK_DI()		(RCC->AHB1RSTR |= (1 << 7))
-#define GPIOI_PCLK_DI()		(RCC->AHB1RSTR |= (1 << 8))
+#define GPIOA_PCLK_DI()		(RCC->AHB1RSTR &= ~(1 << 0))
+#define GPIOB_PCLK_DI()		(RCC->AHB1RSTR &= ~(1 << 1))
+#define GPIOC_PCLK_DI()		(RCC->AHB1RSTR &= ~(1 << 2))
+#define GPIOD_PCLK_DI()		(RCC->AHB1RSTR &= ~(1 << 3))
+#define GPIOE_PCLK_DI()		(RCC->AHB1RSTR &= ~(1 << 4))
+#define GPIOF_PCLK_DI()		(RCC->AHB1RSTR &= ~(1 << 5))
+#define GPIOG_PCLK_DI()		(RCC->AHB1RSTR &= ~(1 << 6))
+#define GPIOH_PCLK_DI()		(RCC->AHB1RSTR &= ~(1 << 7))
+#define GPIOI_PCLK_DI()		(RCC->AHB1RSTR &= ~(1 << 8))
 
 
 /*
  * Clock Disable Macros for I2Cx peripherals
  */
 
-#define I2C1_PCLK_DI()		(RCC->APB1RSTR |= (1 << 21))
-#define I2C2_PCLK_DI()		(RCC->APB1RSTR |= (1 << 22))
-#define I2C3_PCLK_DI()		(RCC->APB1RSTR |= (1 << 23))
+#define I2C1_PCLK_DI()		(RCC->APB1RSTR &= ~(1 << 21))
+#define I2C2_PCLK_DI()		(RCC->APB1RSTR &= ~(1 << 22))
+#define I2C3_PCLK_DI()		(RCC->APB1RSTR &= ~(1 << 23))
 
 
 /*
  * Clock Disable Macros for SPIx peripherals
  */
 
-#define SPI1_PCLK_DI()		(RCC->APB2RSTR |= (1 << 12))
-#define SPI2_PCLK_DI()		(RCC->APB1RSTR |= (1 << 14))
-#define SPI3_PCLK_DI()		(RCC->APB1RSTR |= (1 << 15))
+#define SPI1_PCLK_DI()		(RCC->APB2RSTR &= ~(1 << 12))
+#define SPI2_PCLK_DI()		(RCC->APB1RSTR &= ~(1 << 14))
+#define SPI3_PCLK_DI()		(RCC->APB1RSTR &= ~(1 << 15))
 
 
 /*
  * Clock Disable Macros for USARTx and UARTx peripherals
  */
 
-#define USART1_PCLK_DI()		(RCC->APB2RSTR |= (1 << 4))
-#define USART2_PCLK_DI()		(RCC->APB1RSTR |= (1 << 17))
-#define USART3_PCLK_DI()		(RCC->APB1RSTR |= (1 << 18))
-#define UART4_PCLK_DI()			(RCC->APB1RSTR |= (1 << 19))
-#define UART5_PCLK_DI()			(RCC->APB1RSTR |= (1 << 20))
-#define USART6_PCLK_DI()		(RCC->APB2RSTR |= (1 << 5))
+#define USART1_PCLK_DI()		(RCC->APB2RSTR &= ~(1 << 4))
+#define USART2_PCLK_DI()		(RCC->APB1RSTR &= ~(1 << 17))
+#define USART3_PCLK_DI()		(RCC->APB1RSTR &= ~(1 << 18))
+#define UART4_PCLK_DI()			(RCC->APB1RSTR &= ~(1 << 19))
+#define UART5_PCLK_DI()			(RCC->APB1RSTR &= ~(1 << 20))
+#define USART6_PCLK_DI()		(RCC->APB2RSTR &= ~(1 << 5))
 
 
 /*
  * Clock Disable Macros for SYSCFG peripherals
  */
 
-#define SYSCFG_PCLK_DI()		(RCC->APB2RSTR |= (1 << 14))
+#define SYSCFG_PCLK_DI()		(RCC->APB2RSTR &= ~(1 << 14))
 
 
 /*
